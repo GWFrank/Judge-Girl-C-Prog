@@ -60,12 +60,12 @@ int main(){
         }
         
         if (is_leap_year) {
-            if (case_d > leap_m_days[case_m] || case_d < 0) {
+            if (case_d > leap_m_days[case_m] || case_d < 1) {
                 printf("-2\n");
                 continue;
             }
         } else if (!is_leap_year) {
-            if (case_d > m_days[case_m] || case_d < 0) {
+            if (case_d > m_days[case_m] || case_d < 1) {
                 printf("-2\n");
                 continue;
             }
