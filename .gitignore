@@ -1,5 +1,2 @@
-p*
-hello
-!*.c
-!*.cpp
 .vscode
+*.out
