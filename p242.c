@@ -5,8 +5,8 @@ int dist_sq(int x1, int y1, int x2, int y2){
 }
 
 int abs(int num){
-    if (num >= 0) return num;
-    else return -num;
+    if (num >= 0) {return num;}
+    else {return -num;}
 }
 
 int in_circle(int x, int y, int c_x, int c_y, int c_r) {
@@ -25,13 +25,13 @@ int solve(int *x, int *y, int *r){
         for (int t_x=c_x-c_r; t_x<=c_x+c_r; t_x++) {
             int t_y = c_y;
             while (1) {
-                int in[3] = {};
+                int in[3] = {0};
                 int sum_in = 0;
                 for (int j=0; j<3; j++) {
                     in[j] = in_circle(t_x, t_y, x[j], y[j], r[j]);
                     sum_in += in[j];
                 }
-                if (in[i] == 0) break;
+                if (in[i] == 0) {break;}
 
                 in_circ_cnt[sum_in-1]++;
 
@@ -40,13 +40,13 @@ int solve(int *x, int *y, int *r){
 
             t_y = c_y-1;
             while (1) {
-                int in[3] = {};
+                int in[3] = {0};
                 int sum_in = 0;
                 for (int j=0; j<3; j++) {
                     in[j] = in_circle(t_x, t_y, x[j], y[j], r[j]);
                     sum_in += in[j];
                 }
-                if (in[i] == 0) break;
+                if (in[i] == 0) {break;}
 
                 in_circ_cnt[sum_in-1]++;
                 
