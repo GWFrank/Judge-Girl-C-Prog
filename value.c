@@ -18,11 +18,12 @@ int gcd(int a, int b) {
 
 int value(int type, int width, int height, int length) {
     int metals[6] = {79, 47, 29, 82, 26, 22};
-    int valid_type = 0;
+    int values[6] = {30, 10, 4, 5, 3, 9};
+    int val = 0;
     for (int i=0; i<6; i++) {
-        if (type == metals[i]) valid_type = 1;
+        if (type == metals[i]) val = values[i];
     }
-    if (!valid_type) return -1;
+    if (!val) return -1;
 
     if (width<=0 || height<=0 || length <=0) return -2;
     
@@ -34,8 +35,8 @@ int value(int type, int width, int height, int length) {
     cubes *= length/min;
 
     int cube_vol = min*min*min;
-    int cube_val = cube_vol*cube_vol*type;
-    printf("%d\n", cube_val);
+    int cube_val = cube_vol*cube_vol*val;
+    
     
     return cubes*cube_val;
 }
